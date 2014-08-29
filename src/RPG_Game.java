@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,14 +12,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class HelloWorld extends Application
+public class RPG_Game extends Application
 {
    public static void main(String[] args)
    {
@@ -28,6 +29,14 @@ public class HelloWorld extends Application
    public void start(Stage mainWindow)
    {
 
+      Maze maze = new Maze();
+      
+      ArrayList<Enemy> enemies = new ArrayList<Enemy>();
+      for (int i=0; i<3; i++)
+         enemies.add(new Enemy());
+
+      AbstractFigure hero = new Hero();
+      
 //  Define basic grid
       GridPane grid = new GridPane();
       grid.setAlignment(Pos.CENTER);
