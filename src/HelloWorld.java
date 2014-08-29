@@ -47,6 +47,7 @@ public class HelloWorld extends Application
       grid.add(userTextField, 1, 1);
 
 //  Add button
+      
       Button btn = new Button();
       btn.setText("OK");
       final Text actiontarget = new Text();
