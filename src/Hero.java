@@ -1,22 +1,27 @@
 
 public class Hero extends AbstractFigure
 {
+   
+//   HeroLockClass locks;
+   HeroThreadClass thread;
 
    public Hero()
    {
-      // TODO Auto-generated constructor stub
+      super();
+      thread = new HeroThreadClass(this);
    }
 
-   public Hero(Character gender)
-   {
-      super(gender);
-      // TODO Auto-generated constructor stub
-   }
+//   public Hero(Character gender)
+//   {
+//      super(gender);
+//      thread = new HeroThreadClass(this);
+//   }
 
-   public Hero(Integer health, Integer exp, Integer speed, Integer defense)
+   public Hero(Integer health, Integer exp, Integer speed, Integer defense,
+               Position loc)
    {
-      super(health, exp, speed, defense);
-      // TODO Auto-generated constructor stub
+      super(health, exp, speed, defense, loc);
+      thread = new HeroThreadClass(this);
    }
 
    @Override

@@ -15,26 +15,27 @@ public abstract class AbstractFigure
       _health = default_health;
       _exp = default_exp;
       _speed = default_speed;
-      
-      _location = new Position();
    }
-   public AbstractFigure(Character gender)
-   {
-      this();
-      _gender = gender;
-   }
+//   public AbstractFigure(Character gender)
+//   {
+//      this();
+//      _gender = gender;
+//   }
    public AbstractFigure(Position location)
    {
       this();
       _location.update(location);
    }
-   public AbstractFigure(Integer health, Integer exp, Integer speed, Integer defense)
+   public AbstractFigure(Integer health, Integer exp, Integer speed, Integer defense,
+                         Position location)
    {
       this();
       _health = health;
       _exp = exp;
       _speed = speed;
       _defense = defense;
+
+      _location = location;
    }
    
    public abstract int Attack();
