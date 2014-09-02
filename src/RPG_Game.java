@@ -84,33 +84,6 @@ public class RPG_Game extends Application
 //      mainWindow.setScene(new Scene(root, 300, 250));
       mainWindow.show();
 
-/*
- * End the program when the rider threads are finished.
- */
-      for (int i=0; i<numEnemies; i++)
-      {
-         try
-         {   enemies.get(i).thread.t.join(); }
-         catch (InterruptedException e)
-         {   e.printStackTrace(); }
-      }
-
-/*
- * Once enemy threads are finished, signal the hero thread to shutdown
- */
-      try
-      {   hero.thread.t.join(); }
-      catch (InterruptedException e)
-      {   e.printStackTrace(); }
-
-/*
- * When enemies are finished and the hero is done, then shut down the
- * maze
- */
-      try
-      {   maze.thread.t.join(); }
-      catch (InterruptedException e)
-      {   e.printStackTrace(); }
 
    }
 }

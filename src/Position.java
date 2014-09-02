@@ -1,16 +1,17 @@
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Position
 {
-   Integer x, y;
+   AtomicInteger x, y;
    
    Position()
    {
-      x = 0;   y = 0;
+      x.set(0);   y.set(0);
    }
 
    public void update(Position newPos)
    {
-      x = newPos.x;
-      y = newPos.y;
+      x.set(newPos.x.get());
+      y.set(newPos.y.get());
    }
 }

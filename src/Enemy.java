@@ -2,15 +2,11 @@
 public class Enemy extends AbstractFigure
 {
 
-//   EnemyLockClass locks;
-   EnemyThreadClass thread;
    int _ID = 0;
 
    public Enemy()
    {
       super();
-      thread = new EnemyThreadClass(this);
-      // TODO Auto-generated constructor stub
    }
 
 //   public Enemy(Character gender)
@@ -24,7 +20,6 @@ public class Enemy extends AbstractFigure
    {
       super(health, exp, speed, defense, loc);
       _ID = ID;
-      thread = new EnemyThreadClass(this);
       // TODO Auto-generated constructor stub
    }
 

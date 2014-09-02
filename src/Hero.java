@@ -3,25 +3,21 @@ public class Hero extends AbstractFigure
 {
    
 //   HeroLockClass locks;
-   HeroThreadClass thread;
 
    public Hero()
    {
       super();
-      thread = new HeroThreadClass(this);
    }
 
 //   public Hero(Character gender)
 //   {
 //      super(gender);
-//      thread = new HeroThreadClass(this);
 //   }
 
    public Hero(Integer health, Integer exp, Integer speed, Integer defense,
                Position loc)
    {
       super(health, exp, speed, defense, loc);
-      thread = new HeroThreadClass(this);
    }
 
    @Override
